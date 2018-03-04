@@ -1,0 +1,11 @@
+{
+  "template": "state.jade",
+  "name": "Wisconsin",
+  "byways": [
+    "81450",
+    "2325",
+    "2249",
+    "2324",
+    "80920"
+  ]
+}
