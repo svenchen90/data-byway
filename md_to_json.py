@@ -78,9 +78,14 @@ for filename in os.listdir(dir):
 						data['ps'].append(line)
 					line = fp.readline()
 			
+			
+			for key in ['path', 'includes', 'part of']:
+				if key in data and type(data[key]) == type([]):
+					data[key] = map(lambda x: x[:-1] , data[key]);
+					
 			list.append(data)
 	else:
 		continue
 with open("data.min.js", "a") as myfile:
 	for line in list:
-		myfile.write(json.dumps(line, sort_keys=True) + '\n', )
+		myfile.write(json.dumps(line,  sort_keys=True) + '\n', )
